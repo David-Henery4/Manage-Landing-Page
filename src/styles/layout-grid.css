@@ -1,0 +1,13 @@
+
+.main-layout-grid{
+  display: grid;
+  grid-template-columns: 24px repeat(10,1fr) 24px;
+}
+
+.inner-section-columns{
+  grid-column: 2/12;
+}
+
+.bleed-section-columns{
+  grid-column: 1/13;
+}
