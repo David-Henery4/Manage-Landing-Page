@@ -1,9 +1,20 @@
 @import"./layout-grid.css";
+@import"./styles.css";
+@import "./text-styles.css";
 
 
 /* :root not needed in reset */
 :root {
-  --text: #6b6375;
+  --color-primary: #F3603C;
+  --color-secondary: #242D52;
+  --color-dark: #1D1E25;
+  --color-light: #FFF0EC;
+  --color-white: #FFFFFF;
+
+  /* Grid Variables */
+  --grid-margin-mobile: 24px;
+  --grid-margin-tablet: 40px;
+  --grid-margin-desktop: 165px;
 }
 
 *,

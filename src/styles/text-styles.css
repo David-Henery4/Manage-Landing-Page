@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-secondary);
+  font-family: var(--font-vietnam);
+}
+
+h1 {
+  font-size: 2.5rem; /* 56px */
+  @media (width >= 1024px) {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  @media (width >= 1024px) {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  letter-spacing: -0.29px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.875rem; /* 14px */
+  color: var(--color-secondary);
+  font-family: var(--font-vietnam);
+  @media (width >= 1024px) {
+    font-size: 1rem;
+  }
+}
+
+header p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.cta-container h3{
+  color: var(--color-white);
+}
+
+

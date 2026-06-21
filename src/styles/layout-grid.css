@@ -1,13 +1,27 @@
-
-.main-layout-grid{
+.main-layout-grid {
   display: grid;
-  grid-template-columns: 24px repeat(10,1fr) 24px;
+  
+  grid-template-columns: var(--grid-margin-mobile) repeat(10, 1fr) var(
+      --grid-margin-mobile
+    );
+
+  @media (width >= 768px) {
+    grid-template-columns: var(--grid-margin-tablet) repeat(10, 1fr) var(
+        --grid-margin-tablet
+      );
+  }
+
+  @media (width >= 1024px) {
+    grid-template-columns: var(--grid-margin-desktop) repeat(10, 1fr) var(
+        --grid-margin-desktop
+      );
+  }
 }
 
-.inner-section-columns{
+.inner-section-columns {
   grid-column: 2/12;
 }
 
-.bleed-section-columns{
+.bleed-section-columns {
   grid-column: 1/13;
 }
