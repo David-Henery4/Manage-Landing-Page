@@ -6,6 +6,7 @@
 /* :root not needed in reset */
 :root {
   --color-primary: #F3603C;
+  --color-primary-shade: #F98F75;
   --color-secondary: #242D52;
   --color-dark: #1D1E25;
   --color-light: #FFF0EC;
@@ -36,6 +37,7 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: var(--color-white);
 }
 
 /* Media responsive */
@@ -66,4 +68,64 @@ p {
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
   }
+}
+
+/* Additional */
+
+.header-container{
+  padding-top: 40px;
+}
+
+.header-content-container{
+  text-align: center;
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  padding-top: 48px;
+}
+
+.nav-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta-button{
+  padding: 12px 32px;
+  font-family: var(--font-vietnam);
+  border: none;
+  border-radius:22px;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-light);
+  &:hover{
+    background-color: var(--color-primary-shade);
+    cursor: pointer;
+    scale: 1.02;
+  }
+  &:active{
+    background-color: var(--color-primary);
+  }
+}
+
+.cta-button-primary{
+  background-color: var(--color-primary);
+}
+.cta-button-secondary{
+  background-color: var(--color-white);
+}
+
+.illustration-container {
+  width: 100%;
+  max-width: 318px;
+  margin: 0 auto;
+}
+
+#heading-text-container button{
+  margin-top: 30px;
+}
+
+.heading-paragraph{
+  margin-top: 12px;
 }

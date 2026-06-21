@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import { HeaderSection, FooterSection } from "../components";
 ---
 
 <html lang="en">
@@ -10,13 +11,13 @@ import { Font } from "astro:assets";
     <Font cssVariable="--font-vietnam" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Manage</title>
+    <title>Manage Landing Page</title>
   </head>
   <body class="main-layout-grid">
-    <header class="inner-section-columns">Header</header>
+    <HeaderSection/>
 
     <slot />
 
-    <footer class="inner-section-columns">Footer</footer>
+    <FooterSection/> 
   </body>
 </html>

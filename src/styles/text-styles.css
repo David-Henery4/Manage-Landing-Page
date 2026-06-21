@@ -8,6 +8,11 @@ h4 {
 
 h1 {
   font-size: 2.5rem; /* 56px */
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 50px;
+  max-width: 312px;
+  margin:  0 auto;
   @media (width >= 1024px) {
     font-size: 3.5rem;
   }
@@ -15,6 +20,9 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.62px;
   @media (width >= 1024px) {
     font-size: 2.5rem;
   }
@@ -30,6 +38,8 @@ p {
   font-size: 0.875rem; /* 14px */
   color: var(--color-secondary);
   font-family: var(--font-vietnam);
+  line-height: 28px;
+  opacity: .5;
   @media (width >= 1024px) {
     font-size: 1rem;
   }
@@ -40,7 +50,7 @@ header p {
   font-weight: 300;
 }
 
-.cta-container h3{
+.cta-container h3 {
   color: var(--color-white);
 }
 
