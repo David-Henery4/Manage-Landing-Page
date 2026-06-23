@@ -4,6 +4,8 @@
 @import "./slider.css";
 @import "./cta.css";
 @import "./footer.css";
+@import "./header.css";
+
 
 /* :root not needed in reset */
 :root {
@@ -86,6 +88,14 @@ p {
   width: 100%;
   gap: 20px;
   padding-top: 48px;
+  @media (width >= 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    text-align: left;
+    padding-top: 60px;
+    gap: 60px;
+    align-items: center;
+  }
 }
 
 .nav-container {
@@ -98,11 +108,27 @@ p {
   fill: var(--color-secondary);
 }
 
-.nav-container button{
+.nav-container .nav-toggle {
   background-color: transparent;
   border: none;
-  &:hover{
+  &:hover {
     cursor: pointer;
+  }
+  @media (width >= 768px) {
+    display: none;
+  }
+}
+
+.nav-container .nav-cta{
+  display: none;
+  @media (width >= 768px) {
+    display: block;
+  }
+}
+
+.nav-logo-container{
+  @media (width >= 768px) {
+    align-self: flex-end;
   }
 }
 
@@ -145,6 +171,9 @@ p {
   width: 100%;
   max-width: 318px;
   margin: 0 auto;
+  @media (width >= 768px) {
+    grid-column: 2;
+  }
 }
 
 #heading-text-container button {
@@ -153,6 +182,13 @@ p {
 
 .heading-paragraph {
   margin-top: 12px;
+  max-width: 350px;
+  margin: 0 auto;
+
+  @media (width >= 768px) {
+    margin-left: 0;
+    margin-top: 14px;
+  }
 }
 
 .about-section-container {

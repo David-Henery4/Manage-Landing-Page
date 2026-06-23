@@ -1,0 +1,18 @@
+.nav-links-header{
+  display: none;
+  gap: 12px;
+  @media (width >= 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav-links-header a{
+  font-family: var(--font-vietnam);
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+

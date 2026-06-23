@@ -1,13 +1,25 @@
 ---
 import LogoIcon from "../../../public/images/logo.svg";
 import BurgerIcon from "../../../public/images/icon-hamburger.svg";
+import navigationData from "../../local-data/navigationData";
 ---
 
 <nav class="nav-container" aria-label="Primary navigation">
-  <a aria-label="Manage home" href="/">
+  <a class="nav-logo-container" aria-label="Manage home" href="/">
     <LogoIcon class="nav-container-logo" aria-hidden="true" />
     <span class="sr-only">Manage home</span>
   </a>
+
+  <div class="nav-links-header">
+    {
+      navigationData
+        .map((navLink) => {
+          return <a href="">{navLink.label}</a>;
+        })
+        .slice(1, -1)
+    } 
+  </div>
+
   <button
     type="button"
     class="nav-toggle"
@@ -17,4 +29,6 @@ import BurgerIcon from "../../../public/images/icon-hamburger.svg";
   >
     <BurgerIcon aria-hidden="true" />
   </button>
+
+  <button class="cta-button cta-button-primary nav-cta"> Get Started </button>
 </nav>
