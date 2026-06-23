@@ -3,7 +3,18 @@ import LogoIcon from "../../../public/images/logo.svg";
 import BurgerIcon from "../../../public/images/icon-hamburger.svg";
 ---
 
-<nav class="nav-container">
-  <LogoIcon />
-  <BurgerIcon />
+<nav class="nav-container" aria-label="Primary navigation">
+  <a aria-label="Manage home" href="/">
+    <LogoIcon class="nav-container-logo" aria-hidden="true" />
+    <span class="sr-only">Manage home</span>
+  </a>
+  <button
+    type="button"
+    class="nav-toggle"
+    ria-expanded={false}
+    aria-controls="mobile-menu"
+    aria-label={false ? "Close menu" : "Open menu"}
+  >
+    <BurgerIcon aria-hidden="true" />
+  </button>
 </nav>

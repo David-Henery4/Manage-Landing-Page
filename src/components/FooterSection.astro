@@ -1,5 +1,52 @@
 ---
-
+import navigationData from "../local-data/navigationData";
+import socialLinks from "../local-data/socialLinks";
+import Logo from "../../public/images/logo.svg";
 ---
 
-<footer class="bleed-section-columns">Footer</footer>
+<footer class="bleed-section-columns main-layout-grid footer-section">
+  <div class="inner-section-columns footer-content-container">
+    <div class="email-input-container">
+      <input
+        id="email"
+        autocomplete="email"
+        type="email"
+        placeholder="Updates in your inbox..."
+      />
+      <button>Go</button>
+    </div>
+
+    <div class="nav-links-container">
+      {
+        navigationData.map((navLink) => {
+          return <a href={navLink.href}>{navLink.label}</a>;
+        })
+      }
+    </div>
+
+    <div class="logo-and-socials-container">
+      <div class="socials-list">
+        {
+          socialLinks.map((socialLink) => {
+            return (
+              <a aria-label={`Manage ${socialLink.label} page`} href="#">
+                {<socialLink.icon aria-hidden="true" />}
+                <span class="sr-only">Manage {`${socialLink.label} page`}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+      <div>
+        <a aria-label="Manage home" href="/">
+          <Logo class="footer-logo" aria-hidden="true" />
+          <span class="sr-only">Manage home</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <p id="copyright-text">Copyright 2020. All Rights Reserved</p>
+    </div>
+  </div>
+</footer>

@@ -1,6 +1,6 @@
 .main-layout-grid {
   display: grid;
-  
+  overflow-x: hidden;
   grid-template-columns: var(--grid-margin-mobile) repeat(10, 1fr) var(
       --grid-margin-mobile
     );

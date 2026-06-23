@@ -1,16 +1,20 @@
-@import"./layout-grid.css";
-@import"./styles.css";
+@import "./layout-grid.css";
+@import "./styles.css";
 @import "./text-styles.css";
-
+@import "./slider.css";
+@import "./cta.css";
+@import "./footer.css";
 
 /* :root not needed in reset */
 :root {
-  --color-primary: #F3603C;
-  --color-primary-shade: #F98F75;
-  --color-secondary: #242D52;
-  --color-dark: #1D1E25;
-  --color-light: #FFF0EC;
-  --color-white: #FFFFFF;
+  --color-primary: #f3603c;
+  --color-primary-shade: #f98f75;
+  --color-secondary: #242d52;
+  --color-dark: #1d1e25;
+  --color-light: #fff0ec;
+  --color-off-white: #f4f4f4;
+  --color-white: #ffffff;
+  --color-grey: #8d8d8d;
 
   /* Grid Variables */
   --grid-margin-mobile: 24px;
@@ -72,11 +76,11 @@ p {
 
 /* Additional */
 
-.header-container{
+.header-container {
   padding-top: 40px;
 }
 
-.header-content-container{
+.header-content-container {
   text-align: center;
   display: grid;
   width: 100%;
@@ -84,36 +88,57 @@ p {
   padding-top: 48px;
 }
 
-.nav-container{
+.nav-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.cta-button{
+.nav-container svg {
+  fill: var(--color-secondary);
+}
+
+.nav-container button{
+  background-color: transparent;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.cta-button {
   padding: 12px 32px;
   font-family: var(--font-vietnam);
   border: none;
-  border-radius:22px;
+  border-radius: 22px;
   text-transform: capitalize;
   font-size: 13px;
   font-weight: 700;
   color: var(--color-light);
-  &:hover{
+  &:hover {
     background-color: var(--color-primary-shade);
     cursor: pointer;
-    scale: 1.02;
+    /* scale: 1.02; */
   }
-  &:active{
+  &:active {
     background-color: var(--color-primary);
   }
 }
 
-.cta-button-primary{
+.cta-button-primary {
   background-color: var(--color-primary);
 }
-.cta-button-secondary{
+.cta-button-secondary {
   background-color: var(--color-white);
+  color: var(--color-primary);
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary-shade);
+    cursor: pointer;
+  }
+  &:active {
+    color: var(--color-primary);
+  }
 }
 
 .illustration-container {
@@ -122,10 +147,75 @@ p {
   margin: 0 auto;
 }
 
-#heading-text-container button{
+#heading-text-container button {
   margin-top: 30px;
 }
 
-.heading-paragraph{
+.heading-paragraph {
   margin-top: 12px;
+}
+
+.about-section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 93px;
+  gap: 54px;
+}
+
+.about-text-container {
+  text-align: center;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.about-grid-item {
+  /* position: relative; */
+}
+
+.about-grid-item h3 {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  /* background-color: var(--color-light); */
+}
+
+#banner {
+  background-color: var(--color-light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about-grid-item p {
+  margin-top: 18px;
+}
+
+.about-grid-item h3 #item-number {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 24px;
+  display: inline-block;
+  border-radius: 40px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

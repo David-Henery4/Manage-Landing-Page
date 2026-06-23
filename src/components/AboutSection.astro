@@ -1,5 +1,30 @@
 ---
-
+import aboutData from "../local-data/aboutData";
 ---
 
-<section class="inner-section-columns">About</section>
+<section class="inner-section-columns about-section-container">
+  <div class="about-text-container">
+    <h2>What’s different about Manage?</h2>
+    <p>
+      Manage provides all the functionality your team needs, without the
+      complexity. Our software is tailor-made for modern digital product teams.
+    </p>
+  </div>
+
+  <div class="about-grid">
+    {
+      aboutData.map((aboutInfo, i) => {
+        return (
+          <div class="about-grid-item">
+            <h3>
+              <span id="banner"></span>
+              <span id="item-number" >0{i + 1}</span>
+              {aboutInfo.title}
+            </h3>
+            <p>{aboutInfo.description}</p>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

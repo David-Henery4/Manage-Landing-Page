@@ -1,0 +1,19 @@
+
+
+
+.cta-container{
+  background-color: var(--color-primary);
+  padding: 91px 0px;
+}
+
+.cta-content-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.cta-content-container h2{
+  text-align: center;
+}
