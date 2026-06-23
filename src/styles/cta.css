@@ -4,6 +4,10 @@
 .cta-container{
   background-color: var(--color-primary);
   padding: 91px 0px;
+  @media (width >= 768px) {
+    padding: 120px 0px;
+  }
+
 }
 
 .cta-content-container{
@@ -16,4 +20,6 @@
 
 .cta-content-container h2{
   text-align: center;
+  max-width: 445px;
+  margin: 0 auto;
 }
