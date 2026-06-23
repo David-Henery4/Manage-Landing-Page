@@ -193,14 +193,23 @@ p {
 
 .about-section-container {
   width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding-top: 93px;
   gap: 54px;
+  @media (width >= 768px) {
+    flex-direction: row;
+    max-width: none;
+  }
 }
 
 .about-text-container {
   text-align: center;
+  @media (width >= 768px) {
+    text-align: left;
+  }
 }
 
 .about-grid {
@@ -227,9 +236,12 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150%;
+  width: 15000%;
   height: 100%;
   z-index: -1;
+  @media (width >= 768px) {
+    display: none;
+  }
 }
 
 .about-grid-item p {
