@@ -6,7 +6,6 @@
 @import "./footer.css";
 @import "./header.css";
 
-
 /* :root not needed in reset */
 :root {
   --color-primary: #f3603c;
@@ -80,6 +79,12 @@ p {
 
 .header-container {
   padding-top: 40px;
+  @media (width >= 768px) {
+    padding-top: 50px;
+  }
+  @media (width >= 1024px) {
+    padding-top: 56px;
+  }
 }
 
 .header-content-container {
@@ -95,6 +100,9 @@ p {
     padding-top: 60px;
     gap: 60px;
     align-items: center;
+  }
+  @media (width >= 1024px) {
+    padding-top: 120px;
   }
 }
 
@@ -119,14 +127,14 @@ p {
   }
 }
 
-.nav-container .nav-cta{
+.nav-container .nav-cta {
   display: none;
   @media (width >= 768px) {
     display: block;
   }
 }
 
-.nav-logo-container{
+.nav-logo-container {
   @media (width >= 768px) {
     align-self: flex-end;
   }
@@ -174,10 +182,16 @@ p {
   @media (width >= 768px) {
     grid-column: 2;
   }
+  @media (width >= 1024px) {
+    max-width: 540px;
+  }
 }
 
 #heading-text-container button {
   margin-top: 30px;
+  @media (width >= 1024px) {
+    margin-top: 40px;
+  }
 }
 
 .heading-paragraph {
@@ -188,6 +202,9 @@ p {
   @media (width >= 768px) {
     margin-left: 0;
     margin-top: 14px;
+  }
+  @media (width >= 1024px) {
+    margin-top: 16px;
   }
 }
 
@@ -202,6 +219,11 @@ p {
   @media (width >= 768px) {
     flex-direction: row;
     max-width: none;
+    padding-top: 112px;
+  }
+  @media (width >= 1024px) {
+    padding-top: 132px;
+    gap: 108px;
   }
 }
 
@@ -209,6 +231,13 @@ p {
   text-align: center;
   @media (width >= 768px) {
     text-align: left;
+  }
+}
+
+.about-text-container p{
+  margin-top: 13px;
+  @media (width >= 768px) {
+    margin-top: 24px;
   }
 }
 
