@@ -14,17 +14,17 @@
   @media (width >= 948px) {
     grid-template-columns: 71.5px repeat(10, 1fr) 71.5px;
   }
-  /* @media (width >= 1024px) {
+  /* @media (width >= 1080px) {
     grid-template-columns: 71.5px repeat(10, 1fr) 71.5px;
   } */
-  /* @media (width >= 1024px) {
+  @media (width >= 1172px) {
     grid-template-columns: 102.5px repeat(10, 1fr) 102.5px;
-  } */
-  /* @media (width >= 1024px) {
+  }
+  @media (width >= 1290px) {
     grid-template-columns: var(--grid-margin-desktop) repeat(10, 1fr) var(
         --grid-margin-desktop
       );
-  } */
+  }
 }
 
 .inner-section-columns {
