@@ -21,6 +21,8 @@
   --grid-margin-mobile: 24px;
   --grid-margin-tablet: 40px;
   --grid-margin-desktop: 165px;
+
+  --grid-section-max-width: 1110px;
 }
 
 *,
@@ -79,6 +81,9 @@ p {
 
 .header-container {
   padding-top: 40px;
+  width: 100%;
+  max-width: var(--grid-section-max-width);
+  margin: 0 auto;
   @media (width >= 768px) {
     padding-top: 50px;
   }
@@ -224,6 +229,7 @@ p {
   @media (width >= 1024px) {
     padding-top: 132px;
     gap: 108px;
+    max-width: var(--grid-section-max-width);
   }
 }
 
@@ -234,7 +240,7 @@ p {
   }
 }
 
-.about-text-container p{
+.about-text-container p {
   margin-top: 13px;
   @media (width >= 768px) {
     margin-top: 24px;

@@ -9,6 +9,9 @@
 }
 
 .footer-content-container {
+  width: 100%;
+  max-width: var(--grid-section-max-width);
+  margin: 0 auto;
   display: grid;
   gap: 50px;
   @media (width >= 768px) {
