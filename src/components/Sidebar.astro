@@ -1,0 +1,31 @@
+---
+import navigationData from "../local-data/navigationData";
+import CloseIcon from "/public/images/icon-close.svg";
+import LogoIcon from "/public/images/logo.svg";
+---
+
+<dialog id="sidebar-menu">
+    <div class="sidebar-icons-container">
+      <a href="/">
+        <LogoIcon class="sidebar-logo" />
+      </a>
+      <button id="sidebar-close-toggle">
+        <CloseIcon />
+      </button>
+    </div>
+    <nav aria-label="Sidebar" class="sidebar-nav">
+      <menu class="nav-links-sidebar">
+        {
+          navigationData
+            .map((navLink) => {
+              return (
+                <li>
+                  <a href="#">{navLink.label}</a>
+                </li>
+              );
+            })
+            .slice(1, -1)
+        }
+      </menu>
+    </nav>
+</dialog>

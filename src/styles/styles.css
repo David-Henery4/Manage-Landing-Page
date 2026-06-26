@@ -5,6 +5,8 @@
 @import "./cta.css";
 @import "./footer.css";
 @import "./header.css";
+@import "./about.css";
+@import "./sidebar.css";
 
 /* :root not needed in reset */
 :root {
@@ -45,6 +47,8 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--color-white);
+  /* Added after using too many times!!!! (Needs to remove the others now) */
+  font-family: var(--font-vietnam);
 }
 
 /* Media responsive */
@@ -79,71 +83,6 @@ p {
 
 /* Additional */
 
-.header-container {
-  padding-top: 40px;
-  width: 100%;
-  max-width: var(--grid-section-max-width);
-  margin: 0 auto;
-  @media (width >= 768px) {
-    padding-top: 50px;
-  }
-  @media (width >= 1024px) {
-    padding-top: 56px;
-  }
-}
-
-.header-content-container {
-  text-align: center;
-  display: grid;
-  width: 100%;
-  gap: 20px;
-  padding-top: 48px;
-  @media (width >= 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense;
-    text-align: left;
-    padding-top: 60px;
-    gap: 60px;
-    align-items: center;
-  }
-  @media (width >= 1024px) {
-    padding-top: 120px;
-  }
-}
-
-.nav-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-container svg {
-  fill: var(--color-secondary);
-}
-
-.nav-container .nav-toggle {
-  background-color: transparent;
-  border: none;
-  &:hover {
-    cursor: pointer;
-  }
-  @media (width >= 768px) {
-    display: none;
-  }
-}
-
-.nav-container .nav-cta {
-  display: none;
-  @media (width >= 768px) {
-    display: block;
-  }
-}
-
-.nav-logo-container {
-  @media (width >= 768px) {
-    align-self: flex-end;
-  }
-}
 
 .cta-button {
   padding: 12px 32px;
@@ -178,117 +117,6 @@ p {
   &:active {
     color: var(--color-primary);
   }
-}
-
-.illustration-container {
-  width: 100%;
-  max-width: 318px;
-  margin: 0 auto;
-  @media (width >= 768px) {
-    grid-column: 2;
-  }
-  @media (width >= 1024px) {
-    max-width: 540px;
-  }
-}
-
-#heading-text-container button {
-  margin-top: 30px;
-  @media (width >= 1024px) {
-    margin-top: 40px;
-  }
-}
-
-.heading-paragraph {
-  margin-top: 12px;
-  max-width: 350px;
-  margin: 0 auto;
-
-  @media (width >= 768px) {
-    margin-left: 0;
-    margin-top: 14px;
-  }
-  @media (width >= 1024px) {
-    margin-top: 16px;
-  }
-}
-
-.about-section-container {
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 93px;
-  gap: 54px;
-  @media (width >= 768px) {
-    flex-direction: row;
-    max-width: none;
-    padding-top: 112px;
-  }
-  @media (width >= 1024px) {
-    padding-top: 132px;
-    gap: 108px;
-    max-width: var(--grid-section-max-width);
-  }
-}
-
-.about-text-container {
-  text-align: center;
-  @media (width >= 768px) {
-    text-align: left;
-  }
-}
-
-.about-text-container p {
-  margin-top: 13px;
-  @media (width >= 768px) {
-    margin-top: 24px;
-  }
-}
-
-.about-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.about-grid-item {
-  /* position: relative; */
-}
-
-.about-grid-item h3 {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  /* background-color: var(--color-light); */
-}
-
-#banner {
-  background-color: var(--color-light);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 15000%;
-  height: 100%;
-  z-index: -1;
-  @media (width >= 768px) {
-    display: none;
-  }
-}
-
-.about-grid-item p {
-  margin-top: 18px;
-}
-
-.about-grid-item h3 #item-number {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 10px 24px;
-  display: inline-block;
-  border-radius: 40px;
 }
 
 .sr-only {

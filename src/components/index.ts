@@ -3,6 +3,7 @@ import AboutSection from "./AboutSection.astro";
 import SliderSection from "./SliderSection.astro";
 import CTA from "./CTA.astro";
 import FooterSection from "./FooterSection.astro";
+import Sidebar from "./Sidebar.astro";
 
 
 export {
@@ -10,5 +11,6 @@ export {
   CTA,
   SliderSection,
   FooterSection,
-  HeaderSection
+  HeaderSection,
+  Sidebar
 }
