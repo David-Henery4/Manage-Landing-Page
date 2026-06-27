@@ -18,6 +18,15 @@ dialog {
   }
 }
 
+body:has(dialog[open]){
+  overflow-y: hidden;
+  padding-right: 16px;
+  @media (width >= 768px) {
+    overflow-y: scroll;
+    padding-right: 0px;
+  }
+}
+
 
 dialog[open] {
   transform: translateX(0);
