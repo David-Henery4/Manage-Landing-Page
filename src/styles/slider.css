@@ -14,12 +14,38 @@
 
 .slider-container-outer {
   margin-top: 62px;
+  /* Slider testing */
+  /* position: relative;
+  min-height: 405px;
+  overflow: hidden; */
+
+  /* I've removed the "bleed-section-columns" from the element */
+  grid-column: 2/12;
+  @media (min-width: 768px) {
+    grid-column: 1/-1;
+  }
 }
 
 .slider-container {
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  grid-auto-flow: column;
+  gap: 48px;
+  align-items: stretch;
   justify-content: center;
-  align-items: center;
+  transition: 2s all;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 540px);
+  }
+}
+
+.slider-container.is-dragging {
+  cursor: grabbing;
 }
 
 .slider-container-slide {
@@ -27,6 +53,8 @@
   display: grid;
   grid-template-rows: 36px 36px 1fr;
   justify-items: center;
+  /* width: 540px; */
+  width: 100%;
   max-width: 540px;
 }
 
@@ -85,4 +113,9 @@
 
 .slider-section-cta {
   margin-top: 47px;
+  width: fit-content;
+  display: grid;
+  gap: 24px;
+  place-items: center;
+  margin: 0 auto;
 }

@@ -2,47 +2,49 @@
 import testimonials from "../local-data/testimonialData";
 import Image from "astro/components/Image.astro";
 import CTAButton from "./shared/CTAButton.astro";
+//// .slice(0,1)
 ---
+
+<script src="../js/testimonial-slider.ts"></script>
 
 <section class="bleed-section-columns slider-section main-layout-grid">
   <h2 class="inner-section-columns">What they’ve said</h2>
-  <div class="inner-section-columns slider-container-outer">
-    <div class="slider-container">
+  <div id="slider-container-outer" class="slider-container-outer">
+    <div id="slider-container-inner" class="slider-container">
       {
-        testimonials
-          .map((testimonial) => {
-            return (
-              <div class="slider-container-slide">
-                <div class="slide-background" />
-                <Image
-                  class="slide-image"
-                  src={testimonial.avatar}
-                  alt={`Avatar for: ${testimonial.name}`}
-                />
-                <div class="slide-text-container">
-                  <h3>{testimonial.name}</h3>
-                  <p>{testimonial.quote}</p>
-                </div>
-              </div>
-            );
-          })
-          .slice(0, 1)
-      }
-    </div>
-    <div class="slider-buttons-container">
-      {
-        testimonials.map((testimonial) => {
-          const temp = testimonial.id === 1;
+        testimonials.map((testimonial, i) => {
           return (
-            <button
-              class={`slider-button ${temp && "slider-button--active"}`}
-            />
+            <div data-slide={i + 1} class="slider-container-slide">
+              <div class="slide-background" />
+              <Image
+                class="slide-image"
+                src={testimonial.avatar}
+                alt={`Avatar for: ${testimonial.name}`}
+              />
+              <div class="slide-text-container">
+                <h3>{testimonial.name}</h3>
+                <p>{testimonial.quote}</p>
+              </div>
+            </div>
           );
         })
       }
     </div>
   </div>
   <div class="inner-section-columns slider-section-cta">
+    <div id="slider-buttons-container" class="slider-buttons-container">
+      {
+        testimonials.map((testimonial, i) => {
+          const temp = testimonial.id === 1;
+          return (
+            <button
+              data-slide-button={i + 1}
+              class={`slider-button ${temp && "slider-button--active"}`}
+            />
+          );
+        })
+      }
+    </div>
     <CTAButton />
   </div>
 </section>
