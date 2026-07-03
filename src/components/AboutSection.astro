@@ -1,5 +1,6 @@
 ---
 import aboutData from "../local-data/aboutData";
+import BgPillGraphic from "/public/images/bg-tablet-pattern.svg";
 ---
 
 <section class="inner-section-columns about-section-container">
@@ -17,8 +18,8 @@ import aboutData from "../local-data/aboutData";
         return (
           <div class="about-grid-item">
             <h3>
-              <span id="banner"></span>
-              <span id="item-number" >0{i + 1}</span>
+              <span id="banner" />
+              <span id="item-number">0{i + 1}</span>
               {aboutInfo.title}
             </h3>
             <p>{aboutInfo.description}</p>
@@ -26,5 +27,8 @@ import aboutData from "../local-data/aboutData";
         );
       })
     }
+  </div>
+  <div class="bg-pill-about">
+    <BgPillGraphic class="svg-resize-full" />
   </div>
 </section>

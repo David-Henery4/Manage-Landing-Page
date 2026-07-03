@@ -2,8 +2,10 @@
 
 
 .cta-container{
+  position: relative;
   background-color: var(--color-primary);
   padding: 91px 0px;
+  overflow-y: hidden;
   @media (width >= 768px) {
     padding: 120px 0px;
   }

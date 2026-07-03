@@ -1,11 +1,18 @@
 ---
 import { Navbar, ImageContainer, TextContainer } from "./header-components";
+import BgPillGraphic from "/public/images/bg-tablet-pattern.svg";
 ---
 
 <header class="inner-section-columns header-container">
+  <div class="bg-pill-header">
+    <BgPillGraphic class="svg-resize-full" />
+  </div>
   <Navbar />
   <div class="header-content-container">
     <ImageContainer />
     <TextContainer />
   </div>
+  <!-- <div class="bg-pill-header-bottom">
+    <BgPillGraphic class="svg-resize-full" />
+  </div> -->
 </header>

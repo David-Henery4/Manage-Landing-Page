@@ -7,6 +7,7 @@
 @import "./header.css";
 @import "./about.css";
 @import "./sidebar.css";
+@import "./bg-graphics.css";
 
 /* :root not needed in reset */
 :root {
@@ -49,6 +50,7 @@ body {
   background-color: var(--color-white);
   /* Added after using too many times!!!! (Needs to remove the others now) */
   font-family: var(--font-vietnam);
+  overflow-x: hidden;
 }
 
 /* Media responsive */

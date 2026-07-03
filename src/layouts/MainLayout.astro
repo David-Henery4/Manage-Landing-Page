@@ -1,6 +1,7 @@
 ---
 import { Font } from "astro:assets";
 import { HeaderSection, FooterSection } from "../components";
+import BgPillGraphic from "/public/images/bg-tablet-pattern.svg";
 ---
 
 <html lang="en">
@@ -14,10 +15,14 @@ import { HeaderSection, FooterSection } from "../components";
     <title>Manage Landing Page</title>
   </head>
   <body class="main-layout-grid">
-    <HeaderSection/>
+    <!-- <div class="temp">
+      <BgPillGraphic class="svg-resize-full" />
+    </div> -->
+
+    <HeaderSection />
 
     <slot />
 
-    <FooterSection/> 
+    <FooterSection />
   </body>
 </html>

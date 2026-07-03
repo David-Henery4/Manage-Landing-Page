@@ -166,6 +166,7 @@
 }
 
 #copyright-text {
+  max-width: none;
   text-align: center;
   @media (width >= 1024px) {
     text-align: right;
