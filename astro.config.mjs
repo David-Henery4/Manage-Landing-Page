@@ -10,4 +10,6 @@ export default defineConfig({
       cssVariable: "--font-vietnam",
     },
   ],
+  site: "https://david-henery4.github.io/",
+  base: "/Manage-Landing-Page/",
 });
