@@ -4,17 +4,21 @@ import socialLinks from "../local-data/socialLinks";
 import Logo from "../../public/images/logo.svg";
 ---
 
+<script src="../js/emailValidation.ts"></script>
+
 <footer class="bleed-section-columns main-layout-grid footer-section">
   <div class="inner-section-columns footer-content-container">
-    <div class="email-input-container">
+    <form id="email-form" class="email-input-container" novalidate>
       <input
         id="email"
-        autocomplete="email"
+        name="email"
         type="email"
+        autocomplete="email"
         placeholder="Updates in your inbox..."
       />
-      <button>Go</button>
-    </div>
+      <button id="email-submit-btn" type="submit">Go</button>
+      <p id="email-error" class="email-error" aria-live="polite"></p>
+    </form>
 
     <div class="nav-links-container">
       {

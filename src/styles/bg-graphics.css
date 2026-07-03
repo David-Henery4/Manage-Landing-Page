@@ -6,6 +6,7 @@
 }
 
 .bg-pill-header {
+  pointer-events: none;
   position: absolute;
   z-index: -10;
   width: 100svw;
@@ -33,6 +34,9 @@
     right: -165px;
     max-width: 770px;
   }
+  @media (min-width: 1440px) {
+    max-width: 940px;
+  }
 }
 
 .bg-pill-header svg {
@@ -48,6 +52,9 @@
   }
   @media (min-width: 1290px) {
     transform: translate(182px, -195px);
+  }
+  @media (min-width: 1440px) {
+        transform: translate(271px, -306px);
   }
 }
 
@@ -104,6 +111,7 @@
   width: 100%;
   height: 100%;
   display: none;
+  pointer-events: none;
   @media (min-width: 768px) {
     display: block;
   }
