@@ -8,6 +8,7 @@ function getEmailPattern(): RegExp {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 }
 
+
 function showError(message: string) {
   if (!emailError || !emailInput) return;
   emailError.textContent = message;
