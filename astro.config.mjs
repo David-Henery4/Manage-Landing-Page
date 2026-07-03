@@ -11,5 +11,5 @@ export default defineConfig({
     },
   ],
   site: "https://david-henery4.github.io/",
-  base: "/Manage-Landing-Page/",
+  base: "Manage-Landing-Page/",
 });
